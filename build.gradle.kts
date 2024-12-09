@@ -52,7 +52,7 @@ dependencies {
 
 application {
     // Define the main class for the application
-    mainClass.set("com.teamdev.jxbrowser.quickstart.App")
+    mainClass.set("com.teamdev.jxbrowser.quickstart.gradle.swing.App")
 }
 
 tasks.withType<JavaExec> {

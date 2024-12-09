@@ -1,23 +1,15 @@
-# JxBrowser in Swing Gradle project
+# JxBrowser in a Gradle-based Swing desktop application
 
-This example demonstrates how to configure a Gradle project with JxBrowser to embed a Swing `BrowserView` widget into a Swing desktop application to display web pages.
+This example demonstrates how to configure a Gradle project with JxBrowser to embed a `BrowserView` widget into a Swing desktop application to display web pages.
 
 ## Prerequisites
 
 To compile and run this example please make sure you use Java 17 or higher.
 
-## Download the project
-
-Clone this repository using the following command:
-
- ```bash
- git clone https://github.com/TeamDev-IP/JxBrowser-QuickStart-Gradle-Swing.git
- cd JxBrowser-QuickStart-Gradle-Swing
- ```
-
 ## Get license
 
-Download a free 30-day evaluation license key by sending a request via the [web form](https://www.teamdev.com/jxbrowser#evaluate).
+If you don't have a license key already, please download a free 30-day evaluation license key
+by sending a request via the [web form](https://www.teamdev.com/jxbrowser#evaluate).
 
 ## Run the Swing application
 
