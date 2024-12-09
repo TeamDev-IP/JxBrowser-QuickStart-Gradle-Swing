@@ -11,8 +11,8 @@ To compile and run this example please make sure you use Java 17 or higher.
 Clone this repository using the following command:
 
  ```bash
- git clone https://github.com/TeamDev-IP/JxBrowser-QuickStart
- cd JxBrowser-QuickStart/Gradle/Swing
+git clone https://github.com/TeamDev-IP/JxBrowser-QuickStart-Gradle-Swing.git
+cd JxBrowser-QuickStart-Gradle-Swing
  ```
 
 ## Get License
