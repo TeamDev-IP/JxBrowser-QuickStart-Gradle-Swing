@@ -19,6 +19,6 @@ Use the following command:
 ./gradlew run -Djxbrowser.license.key=<your_license_key>
 ```
 
-It will build and start a Swing desktop application with Swing `BrowserView` inside that displays https://html5test.teamdev.com as shown below:
+It will build and start a Swing desktop application with the `BrowserView` component inside that displays https://html5test.teamdev.com as shown below:
 
-![Swing BrowserView](https://jxbrowser-support.teamdev.com/img/articles/awt-swing-view.png)
+![BrowserView in a Swing desktop app](https://jxbrowser-support.teamdev.com/img/articles/awt-swing-view.png)
