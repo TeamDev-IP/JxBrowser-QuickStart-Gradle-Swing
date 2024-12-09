@@ -60,7 +60,7 @@ tasks.withType<JavaExec> {
     // the command line to the JavaExec task.
     systemProperties(System.getProperties().mapKeys { it.key as String })
     jvmArgs(
-        // Required for `java.awt.KeyboardFocusManager.setMostRecentFocusOwner()`.
+        // Required for Swing focus traversal to work properly.
         "--add-opens=java.desktop/java.awt=ALL-UNNAMED"
     )
 }
