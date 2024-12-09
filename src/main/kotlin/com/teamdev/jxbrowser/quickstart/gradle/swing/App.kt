@@ -21,7 +21,6 @@
 package com.teamdev.jxbrowser.quickstart.gradle.swing
 
 import com.teamdev.jxbrowser.dsl.Engine
-import com.teamdev.jxbrowser.dsl.JxBrowserLicense
 import com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED
 import com.teamdev.jxbrowser.view.swing.BrowserView
 import java.awt.event.WindowAdapter
@@ -36,9 +35,7 @@ import javax.swing.SwingUtilities
  */
 fun main() {
     // Initialize Chromium.
-    val engine = Engine(HARDWARE_ACCELERATED) {
-        license = JxBrowserLicense("your license key")
-    }
+    val engine = Engine(HARDWARE_ACCELERATED)
 
     // Create a Browser instance.
     val browser = engine.newBrowser()

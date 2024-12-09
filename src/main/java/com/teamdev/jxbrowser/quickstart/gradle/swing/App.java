@@ -21,13 +21,14 @@
 package com.teamdev.jxbrowser.quickstart.gradle.swing;
 
 import static com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED;
+import static javax.swing.SwingUtilities.invokeLater;
 
 import com.teamdev.jxbrowser.engine.Engine;
 import com.teamdev.jxbrowser.view.swing.BrowserView;
+
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
 
 /**
  * This example demonstrates how to initialize Chromium, create a browser instance
@@ -43,7 +44,7 @@ public final class App {
         // Create a Browser instance.
         var browser = engine.newBrowser();
 
-        SwingUtilities.invokeLater(() -> {
+        invokeLater(() -> {
             var frame = new JFrame("JxBrowser AWT/Swing");
             frame.addWindowListener(new WindowAdapter() {
                 @Override
