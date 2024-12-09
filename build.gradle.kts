@@ -52,7 +52,7 @@ dependencies {
 
 application {
     // Define the main class for the application
-    mainClass.set("HelloSwing")
+    mainClass.set("com.teamdev.jxbrowser.quickstart.App")
 }
 
 tasks.withType<JavaExec> {

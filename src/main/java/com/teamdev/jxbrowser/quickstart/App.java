@@ -1,4 +1,4 @@
-/*
+package com.teamdev.jxbrowser.quickstart;/*
  *  Copyright 2024, TeamDev. All rights reserved.
  *
  *  Redistribution and use in source and/or binary forms, with or without
@@ -20,7 +20,6 @@
 
 import static com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED;
 
-import com.teamdev.jxbrowser.browser.Browser;
 import com.teamdev.jxbrowser.engine.Engine;
 import com.teamdev.jxbrowser.view.swing.BrowserView;
 import java.awt.event.WindowAdapter;
@@ -33,7 +32,7 @@ import javax.swing.SwingUtilities;
  * (equivalent of the Chromium tab), embed a Swing BrowserView component into Java Swing
  * frame to display content of the loaded web page, load the required web page.
  */
-public final class HelloSwing {
+public final class App {
 
     public static void main(String[] args) {
         // Initialize Chromium.

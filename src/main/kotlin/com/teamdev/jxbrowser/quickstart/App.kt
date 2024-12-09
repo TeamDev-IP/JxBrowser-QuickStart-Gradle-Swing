@@ -1,3 +1,5 @@
+package com.teamdev.jxbrowser.quickstart
+
 import com.teamdev.jxbrowser.dsl.Engine
 import com.teamdev.jxbrowser.dsl.JxBrowserLicense
 import com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED
