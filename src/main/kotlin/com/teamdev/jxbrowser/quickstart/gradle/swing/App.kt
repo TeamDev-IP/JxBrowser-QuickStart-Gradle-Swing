@@ -18,47 +18,44 @@
  *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import static com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED;
+package com.teamdev.jxbrowser.quickstart.gradle.swing
 
-import com.teamdev.jxbrowser.browser.Browser;
-import com.teamdev.jxbrowser.engine.Engine;
-import com.teamdev.jxbrowser.view.swing.BrowserView;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import com.teamdev.jxbrowser.dsl.Engine
+import com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED
+import com.teamdev.jxbrowser.view.swing.BrowserView
+import java.awt.event.WindowAdapter
+import java.awt.event.WindowEvent
+import javax.swing.JFrame
+import javax.swing.SwingUtilities
 
 /**
  * This example demonstrates how to initialize Chromium, create a browser instance
  * (equivalent of the Chromium tab), embed a Swing BrowserView component into Java Swing
  * frame to display content of the loaded web page, load the required web page.
  */
-public final class HelloSwing {
+fun main() {
+    // Initialize Chromium.
+    val engine = Engine(HARDWARE_ACCELERATED)
 
-    public static void main(String[] args) {
-        // Initialize Chromium.
-        var engine = Engine.newInstance(HARDWARE_ACCELERATED);
+    // Create a Browser instance.
+    val browser = engine.newBrowser()
 
-        // Create a Browser instance.
-        var browser = engine.newBrowser();
-
-        SwingUtilities.invokeLater(() -> {
-            var frame = new JFrame("JxBrowser AWT/Swing");
-            frame.addWindowListener(new WindowAdapter() {
-                @Override
-                public void windowClosing(WindowEvent e) {
-                    // Shutdown Chromium and release allocated resources.
-                    engine.close();
+    SwingUtilities.invokeLater {
+        JFrame("JxBrowser AWT/Swing").apply {
+            // Shutdown Chromium and release allocated resources when the frame closes.
+            addWindowListener(object : WindowAdapter() {
+                override fun windowClosing(e: WindowEvent) {
+                    engine.close()
                 }
-            });
+            })
             // Create and embed Swing BrowserView component to display web content.
-            frame.add(BrowserView.newInstance(browser));
-            frame.setSize(1280, 800);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+            add(BrowserView.newInstance(browser))
+            setSize(1280, 800)
+            setLocationRelativeTo(null)
+            isVisible = true
+        }
 
-            // Load the required web page.
-            browser.navigation().loadUrl("https://html5test.teamdev.com/");
-        });
+        // Load the required web page.
+        browser.navigation().loadUrl("https://html5test.teamdev.com/")
     }
 }
