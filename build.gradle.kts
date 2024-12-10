@@ -49,6 +49,9 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("com.teamdev.jxbrowser.quickstart.gradle.swing.App")
+
+    // Alternatively, you can run a Kotlin example, as follows:
+    // mainClass.set("com.teamdev.jxbrowser.quickstart.gradle.swing.AppKt")
 }
 
 tasks.withType<JavaExec> {
