@@ -41,7 +41,7 @@ fun main() {
     val browser = engine.newBrowser()
 
     SwingUtilities.invokeLater {
-        JFrame("JxBrowser AWT/Swing").apply {
+        JFrame("JxBrowser Swing").apply {
             // Shutdown Chromium and release allocated resources when the frame closes.
             addWindowListener(object : WindowAdapter() {
                 override fun windowClosing(e: WindowEvent) {
