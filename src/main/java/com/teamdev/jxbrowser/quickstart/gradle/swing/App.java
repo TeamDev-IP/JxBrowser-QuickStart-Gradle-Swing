@@ -23,9 +23,11 @@ package com.teamdev.jxbrowser.quickstart.gradle.swing;
 import static com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED;
 import static javax.swing.SwingUtilities.invokeLater;
 
+import com.teamdev.jxbrowser.browser.Browser;
 import com.teamdev.jxbrowser.engine.Engine;
 import com.teamdev.jxbrowser.view.swing.BrowserView;
 
+import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
@@ -39,13 +41,13 @@ public final class App {
 
     public static void main(String[] args) {
         // Initialize Chromium.
-        var engine = Engine.newInstance(HARDWARE_ACCELERATED);
+        Engine engine = Engine.newInstance(HARDWARE_ACCELERATED);
 
         // Create a Browser instance.
-        var browser = engine.newBrowser();
+        Browser browser = engine.newBrowser();
 
         invokeLater(() -> {
-            var frame = new JFrame("JxBrowser Swing");
+            Frame frame = new JFrame("JxBrowser Swing");
             frame.addWindowListener(new WindowAdapter() {
                 @Override
                 public void windowClosing(WindowEvent e) {

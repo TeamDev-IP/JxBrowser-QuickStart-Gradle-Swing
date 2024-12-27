@@ -28,7 +28,7 @@ plugins {
 }
 
 jxbrowser {
-    version = "8.2.1"
+    version = "7.41.6"
 }
 
 repositories {
@@ -41,9 +41,6 @@ dependencies {
 
     // Adds dependency to the Swing UI toolkit integration.
     implementation(jxbrowser.swing)
-
-    // Adds dependency to the JxBrowser Kotlin DSL.
-    implementation(jxbrowser.kotlin)
 }
 
 application {
