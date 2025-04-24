@@ -28,7 +28,7 @@ plugins {
 }
 
 jxbrowser {
-    version = "7.42.4"
+    version = "7.43.0"
 }
 
 repositories {
