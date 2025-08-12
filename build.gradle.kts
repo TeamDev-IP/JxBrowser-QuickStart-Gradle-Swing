@@ -28,7 +28,7 @@ plugins {
 }
 
 jxbrowser {
-    version = "8.9.4"
+    version = "8.10.0"
 }
 
 repositories {
