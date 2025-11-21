@@ -18,13 +18,30 @@
  *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     java
     application
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") version "2.2.21"
 
     // Provides convenience methods for adding JxBrowser dependencies into a project.
     id("com.teamdev.jxbrowser") version "2.0.0"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    options.release.set(17)
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
+    }
 }
 
 jxbrowser {
