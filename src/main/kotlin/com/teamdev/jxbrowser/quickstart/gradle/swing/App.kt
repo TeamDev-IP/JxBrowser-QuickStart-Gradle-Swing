@@ -26,6 +26,7 @@ import com.teamdev.jxbrowser.view.swing.BrowserView
 import java.awt.event.WindowAdapter
 import java.awt.event.WindowEvent
 import javax.swing.JFrame
+import javax.swing.WindowConstants;
 import javax.swing.SwingUtilities
 
 /**
@@ -48,6 +49,8 @@ fun main() {
                     engine.close()
                 }
             })
+            defaultCloseOperation = WindowConstants.DISPOSE_ON_CLOSE
+
             // Create and embed Swing BrowserView component to display web content.
             add(BrowserView.newInstance(browser))
             setSize(1280, 800)
