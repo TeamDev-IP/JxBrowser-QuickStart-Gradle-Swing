@@ -45,7 +45,7 @@ kotlin {
 }
 
 jxbrowser {
-    version = "9.5.3"
+    version = "9.5.4"
 }
 
 repositories {
